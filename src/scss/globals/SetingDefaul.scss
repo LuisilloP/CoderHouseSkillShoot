@@ -1,0 +1,152 @@
+@use "./variables.scss" as var;
+@use "./mixins.scss" as mix;
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: #e6e7e8;
+}
+.no-margin-top {
+  margin-top: 0px !important;
+}
+a {
+  color: #fff;
+}
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+.position-relative {
+  position: relative;
+}
+.displayBlock {
+  display: block !important;
+}
+.vertical-center {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.displayNone {
+  display: none;
+}
+.text-divider {
+  display: flex;
+  align-items: center; // align text and lines vertically
+  padding-top: 10px;
+}
+.text-divider::before,
+.text-divider::after {
+  content: "";
+  height: 1px;
+  background-color: silver;
+  flex-grow: 1; // both lines will expand to occupy the available space
+}
+.blue-divider::before,
+.blue-divider::after {
+  background-color: var.$primary-color-blue !important;
+  height: 30px !important;
+  padding-bottom: 0px !important;
+  margin-top: 20px;
+  @include mix.baja {
+    height: 20px !important;
+    margin-top: 30px !important;
+  }
+}
+.logo {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+.instagram-logo {
+  content: url("/src/assets/instagram.png");
+}
+.facebook-logo {
+  content: url("/src/assets/facebook.png");
+}
+.tik-tok-logo {
+  content: url("/src/assets/tik-tokTwo.png");
+}
+
+h1 {
+  @include mix.mediaAlta {
+    font-size: 4rem !important ;
+    line-height: 80px !important;
+  }
+  @include mix.media {
+    font-size: 3rem !important ;
+    line-height: 60px !important;
+  }
+  @include mix.baja {
+    font-size: 1.4rem !important ;
+    line-height: 30px !important;
+  }
+}
+h2 {
+  @include mix.media {
+    font-size: 2rem !important ;
+    line-height: 60px !important;
+  }
+  @include mix.baja {
+    font-size: 1rem !important ;
+    line-height: 30px !important;
+  }
+}
+h3 {
+  @include mix.media {
+    font-size: 2.2rem !important ;
+    line-height: 60px !important;
+  }
+  @include mix.baja {
+    font-size: 1rem !important ;
+    line-height: 30px !important;
+  }
+}
+h4 {
+  @include mix.media {
+    font-size: 2rem !important ;
+  }
+}
+.cabin {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 700;
+}
+.cabin-400 {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+}
+.flex-colum {
+  display: flex;
+  flex-direction: column;
+}
+.font-img-style {
+  margin-top: 6rem;
+  position: relative;
+  width: 100%;
+  height: 60rem;
+  background-size: cover;
+  transition: all 0.3s ease;
+  @include mix.mediaAlta {
+    transition: all 0.3s ease;
+    height: 45rem;
+    background-position: center right;
+  }
+
+  @include mix.baja {
+    margin-top: 5rem;
+    transition: all 0.3s ease;
+    height: 25rem;
+    background-position: 80%;
+  }
+}
+.center-div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.text-aling-center {
+  text-align: center;
+}

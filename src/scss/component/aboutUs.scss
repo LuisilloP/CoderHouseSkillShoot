@@ -1,0 +1,269 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+.AboutUs {
+  background-color: var.$primary-color-rose;
+  .AboutUs-layer {
+    background-image: url("/src/assets/daRules/layer.png");
+    height: 24rem;
+    position: relative;
+    background-size: cover;
+    top: 63%;
+    width: 90rem;
+    left: 16%;
+    @include mix.mediaBaja {
+      width: 89vw;
+      height: 24vw;
+      left: 11%;
+      top: 35vw;
+    }
+    @include mix.media {
+      top: 56%;
+    }
+  }
+  .AboutUs-img {
+    background-image: url("/src/assets/aboutUs/heroTwo.png");
+    @include mix.mediaBaja {
+      transition: all 0.3s ease;
+      height: 35rem;
+      background-position: initial;
+    }
+    @include mix.BajaMedia {
+      transition: all 0.3s ease;
+      height: 30rem;
+      background-position: 80%;
+    }
+    @include mix.baja {
+      transition: all 0.3s ease;
+      height: 23rem;
+    }
+    .AboutUs-text-img {
+      width: 40rem;
+      position: relative;
+      bottom: 30%;
+      left: 10%;
+      @include mix.mediaBaja {
+        width: 35rem;
+      }
+      @include mix.media {
+        width: 20rem;
+        bottom: 20%;
+      }
+      @include mix.baja {
+        width: 15rem;
+        left: 5%;
+      }
+      h2 {
+        font-family: "Cabin";
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 30px;
+
+        @include mix.baja {
+          font-size: 1.4rem !important;
+        }
+      }
+      h1 {
+        font-family: "Jockey One", sans-serif;
+        color: #fff;
+        font-size: 6rem;
+        margin: 0;
+        padding-bottom: 5%;
+
+        @include mix.baja {
+          font-size: 2.2rem !important;
+        }
+      }
+    }
+  }
+  .history {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    @include mix.baja {
+      padding-top: 0px;
+    }
+    .history-text {
+      width: 80%;
+      margin: 0 auto;
+      h2 {
+        font-size: 33px !important;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 49px !important;
+        @include mix.BajaMedia {
+          font-size: 20px !important;
+        }
+        @include mix.baja {
+          line-height: 22px !important;
+        }
+      }
+    }
+    .container-player {
+      height: 10px;
+      opacity: 0.2;
+      position: relative;
+      z-index: 2;
+      .soccer-ball {
+        background-image: url("/src/assets/aboutUs/ballShadow.png");
+        height: 12.5vw;
+        width: 12.5vw;
+        background-size: cover;
+        position: relative;
+        left: 10vw;
+        bottom: 3vw;
+      }
+      .soccer-ball-down {
+        background-image: url("/src/assets/aboutUs/ballShadow.png");
+        height: 12.5vw;
+        width: 12.5vw;
+        background-size: cover;
+        position: relative;
+        bottom: 96vw;
+        left: 38vw;
+      }
+    }
+    .player-Up {
+      background-image: url("/src/assets/aboutUs/PlayerUp.png");
+      height: 64.4vw;
+      background-size: cover;
+      width: 35vw;
+      position: relative;
+      top: 9vw;
+      right: 0vw;
+    }
+
+    .player-down {
+      background-image: url("/src/assets/aboutUs/PlayerDown.png");
+      height: 47.4vw;
+      background-size: cover;
+      width: 63vw;
+      position: relative;
+      bottom: 40vw;
+      left: 37vw;
+    }
+  }
+  .our-MVVO {
+    height: 140rem;
+    display: grid;
+    grid-template-rows: 1fr 0.9fr 1fr 1fr;
+    .SpecialButton {
+      display: none;
+    }
+    @include mix.media {
+      .btn-welcome-join {
+        display: none;
+      }
+      .SpecialButton {
+        display: inline-block;
+      }
+    }
+    .container-frame {
+      height: 10px;
+      .frame-blue {
+        position: relative;
+        background-image: url("/src/assets/aboutUs/FrameBlue.png");
+        height: 13.5vw;
+        background-size: cover;
+        bottom: 7vw;
+      }
+      .frame-rose {
+        position: relative;
+        background-image: url("/src/assets/aboutUs/VectorRose.png");
+        height: 13.5vw;
+        background-size: cover;
+        bottom: 2vw;
+        @include mix.baja {
+          bottom: 1vw;
+        }
+      }
+      .ballon-foot {
+        background-image: url("/src/assets/aboutUs/ballon-foot.png");
+        position: relative;
+        height: 31vw;
+        width: 27vw;
+        bottom: 26vw;
+        background-size: cover;
+        left: 74vw;
+        @include mix.mediaBaja {
+          bottom: 22vw;
+        }
+        @include mix.BajaMedia {
+          display: none;
+        }
+      }
+    }
+    .mision-color {
+      background-color: var.$primary-color-cian;
+      display: grid;
+    }
+    .mision,
+    .vision,
+    .values,
+    .objetive {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      @include mix.media {
+        display: flex;
+        flex-direction: column;
+      }
+      width: 90%;
+      margin: auto;
+      z-index: 4;
+      .name-button {
+        margin: auto;
+        text-align: center;
+        h2 {
+          font-family: "Jockey One";
+          font-size: 5rem !important;
+          @include mix.media {
+            font-size: 4.5rem !important;
+          }
+          @include mix.BajaMedia {
+            font-size: 3.5rem !important;
+          }
+          @include mix.baja {
+            font-size: 2.5rem !important;
+          }
+        }
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+  .container-field {
+    height: 10px;
+    .field-img {
+      background-image: url("/src/assets/aboutUs/soccerfieldTwo.png");
+      height: 77rem;
+      position: relative;
+      right: 1vw;
+      bottom: 130vw;
+      width: 94vw;
+      background-size: cover;
+      z-index: 1;
+      @include mix.media {
+        right: 2vw;
+        bottom: 188vw;
+        width: 105vw;
+        height: 69rem;
+      }
+    }
+  }
+  p,
+  ul {
+    font-size: 23px;
+    line-height: 150%;
+    @include mix.media {
+      font-size: 20px;
+    }
+    @include mix.BajaMedia {
+      font-size: 18px;
+    }
+    @include mix.baja {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "./variables.scss" as var;
+.swal2-popup
+{
+  background: #000 !important;
+  color: #fff !important;
+  font-family: "Jockey One" !important;
+}
+
+.swal2-styled.swal2-confirm,.swal2-styled.swal2-cancel
+{
+  width: auto !important;
+}

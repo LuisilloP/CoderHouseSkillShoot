@@ -1,0 +1,48 @@
+@mixin Ultrabaja {
+    @media screen and (max-width:359px)
+    {
+        @content
+    }
+};
+@mixin baja {
+    @media screen and (max-width:450px)
+    {
+        @content
+    }
+};
+@mixin BajaMedia {
+    @media screen and (max-width:700px)
+    {
+        @content
+    }
+};
+@mixin bajaAlta {
+    @media screen and (max-width:820px)
+    {
+        @content
+    }
+};
+@mixin media {
+    @media screen and (max-width:900px)
+    {
+        @content
+    }
+};
+@mixin mediaBaja {
+    @media screen and (max-width:1080px)
+    {
+        @content
+    }
+};
+@mixin mediaAlta {
+    @media screen and (max-width:1280px)
+    {
+        @content
+    }
+};
+@mixin Alta {
+    @media screen and (max-width:1440px)
+    {
+        @content
+    }
+};

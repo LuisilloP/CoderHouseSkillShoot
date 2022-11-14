@@ -1,0 +1,58 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+
+footer {
+  padding-bottom: 10px;
+  background-color: black;
+}
+.footer-container {
+  padding: 30px;
+  @include mix.baja {
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-logo-footer {
+    content: url("/src/assets/logoSkillShot.png");
+    width: 140px;
+    height: 65px;
+    object-fit: cover;
+  }
+  p {
+    color: #fff;
+    font-family: "Cabin";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+  }
+  .follow-logos {
+    justify-content: end;
+    display: flex;
+    gap: 25px;
+    @include mix.baja {
+      justify-content: center;
+    }
+    .logo {
+      width: 25px;
+      height: 25px;
+    }
+    .tik-tok-logo {
+      filter: invert(100%);
+    }
+  }
+  .text-footer {
+    display: flex;
+    justify-content: space-between;
+    @include mix.baja {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}

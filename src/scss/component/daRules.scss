@@ -1,0 +1,351 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+.daRules {
+  background-color: var.$primary-color-cian;
+  .daRules-img {
+    background-image: url("/src/assets/daRules/reglamentHeader.png");
+    height: 71vw !important;
+    @include mix.mediaAlta {
+      background-position: initial !important;
+    }
+    @include mix.baja {
+      height: 85vw !important;
+    }
+    .daRules-text-img {
+      width: 40rem;
+      position: relative;
+      top: 20%;
+      left: 10%;
+      @include mix.media {
+        width: 20rem;
+      }
+      @include mix.baja {
+        width: 15rem;
+      }
+      h1 {
+        font-family: "Jockey One", sans-serif;
+        color: #fff;
+        font-size: 6rem;
+        margin: 0;
+        padding-bottom: 5%;
+        @include mix.baja {
+          font-size: 2.2rem !important;
+        }
+      }
+    }
+  }
+  .text-rules {
+    width: 70%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 25px;
+    @include mix.mediaBaja {
+      font-size: 21px;
+    }
+    line-height: 150%;
+  }
+  .rules {
+    height: 50rem;
+    @include mix.mediaBaja {
+      height: 31rem;
+    }
+    @include mix.baja {
+      height: 25rem;
+    }
+    .container-field {
+      height: 10px;
+      .field-img {
+        background-image: url("/src/assets/soccerfield.png");
+        height: 82rem;
+        position: relative;
+        left: 25vw;
+        background-size: cover;
+      }
+    }
+    .reglamentOne-img {
+      background-image: url("/src/assets/daRules/reglamentOne.png");
+      height: 29vw;
+      width: 70vw;
+      margin: 0 auto;
+      background-size: cover;
+      @include mix.BajaMedia {
+        height: 36vw;
+        width: 90vw;
+      }
+    }
+  }
+  .rulesTwo {
+    height: 50rem;
+    @include mix.mediaBaja {
+      height: 31rem;
+    }
+
+    .reglament-two-img {
+      display: flex;
+      gap: 5px;
+      height: 30vw;
+      width: 90vw;
+      margin: 0 auto;
+      @include mix.BajaMedia {
+        width: 95vw;
+        height: 33vw;
+      }
+      .reglament-imag {
+        width: 50%;
+        background-size: cover;
+      }
+      .reglamentTwo-img {
+        background-image: url("/src/assets/daRules/reglamentTwo.png");
+      }
+      .reglamentThree-img {
+        background-image: url("/src/assets/daRules/reglamentThree.png");
+      }
+    }
+  }
+  .rulesThree {
+    height: 50rem;
+    @include mix.mediaBaja {
+      height: 31rem;
+      padding-top: 7%;
+      padding-bottom: 15%;
+    }
+    @include mix.baja {
+      height: 20rem;
+    }
+    .ruleThree-text {
+      width: 40%;
+      margin: 0 auto;
+      text-align: center;
+      @include mix.media {
+        width: 80%;
+      }
+      p {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 41px;
+        text-transform: uppercase;
+        @include mix.baja {
+          font-size: 20px;
+        }
+      }
+    }
+    .reglamentFour-img {
+      background-image: url("/src/assets/daRules/reglamentFour.png");
+      height: 30vw;
+      width: 90vw;
+      background-size: cover;
+      margin: 0 auto;
+      @include mix.BajaMedia {
+        width: 95vw;
+      }
+    }
+  }
+  .general-rules-color {
+    background-color: var.$primary-color-rose;
+  }
+
+  .button-container {
+    position: relative;
+    text-align: center;
+    padding-bottom: 4rem;
+    height: 10px;
+    .btn-welcome-join {
+      position: relative;
+      z-index: 5;
+    }
+    .frame-blue {
+      position: relative;
+      background-image: url("/src/assets/daRules/VectorBlue.png");
+      height: 13.5vw;
+      background-size: cover;
+      bottom: 58vw;
+      @include mix.mediaBaja {
+        bottom: 53vw;
+      }
+    }
+    .soccer-player {
+      background-image: url("/src/assets/daRules/soccerPlayer.png");
+      height: 51vw;
+      background-size: cover;
+      width: 55.5vw;
+      position: relative;
+      bottom: 25vw;
+      right: 1vw;
+      z-index: 4;
+    }
+  }
+  .general-rules {
+    width: 80%;
+    @include mix.mediaBaja {
+      width: 90%;
+    }
+    margin: 0 auto;
+    h1 {
+      text-align: center;
+      font-family: "Jockey One";
+      font-size: 4.5rem !important;
+      padding-top: 5rem;
+      @include mix.media {
+        font-size: 4.5rem !important;
+      }
+      @include mix.BajaMedia {
+        font-size: 3.5rem !important;
+      }
+      @include mix.baja {
+        font-size: 2.5rem !important;
+      }
+    }
+    ol {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+    }
+    ol li {
+      counter-increment: my-awesome-counter;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-family: "Cabin";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 150%;
+      font-size: 23px;
+      @include mix.media {
+        font-size: 20px;
+      }
+      @include mix.BajaMedia {
+        font-size: 18px;
+      }
+      @include mix.baja {
+        font-size: 16px;
+      }
+    }
+    ol li::before {
+      display: inline-block;
+      content: counter(my-awesome-counter) ".";
+      font-size: 6rem;
+      font-family: "Jockey One";
+      margin-right: 5%;
+      line-height: 87px;
+      @include mix.media {
+        font-size: 5rem;
+      }
+      @include mix.BajaMedia {
+        font-size: 4.5rem;
+      }
+      @include mix.baja {
+        font-size: 4rem;
+      }
+    }
+  }
+  .button-container-rose {
+    height: 5rem;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+
+    .frame-rose {
+      position: relative;
+      background-image: url("/src/assets/daRules/Vector.png");
+      height: 13.5vw;
+      background-size: cover;
+      bottom: 4vw;
+      z-index: 2;
+      @include mix.mediaBaja {
+        bottom: 1vw;
+      }
+    }
+  }
+  .goal-penalty {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    @include mix.baja {
+      flex-direction: column;
+    }
+  }
+  .scores {
+    width: 70%;
+    margin: 0 auto;
+    @include mix.mediaBaja {
+      width: 80%;
+    }
+    h1 {
+      text-align: center;
+      font-family: "Jockey One";
+      font-size: 4.5rem !important;
+      padding-top: 5rem;
+      @include mix.media {
+        font-size: 4.5rem !important;
+      }
+      @include mix.BajaMedia {
+        font-size: 3.5rem !important;
+      }
+      @include mix.baja {
+        font-size: 2.5rem !important;
+      }
+    }
+    .container-score {
+      width: 25rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      @include mix.baja {
+        width: 100%;
+      }
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: "Jockey One";
+        font-size: 55px;
+        line-height: 68px;
+        @include mix.media {
+          font-size: 2.5rem !important;
+        }
+        @include mix.BajaMedia {
+          font-size: 2rem !important;
+        }
+        @include mix.baja {
+          font-size: 1.6rem !important;
+        }
+      }
+      .name-point {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 0.5rem;
+        height: 82px;
+      }
+      .name {
+        background-color: var.$primary-color-red;
+      }
+      .point {
+        background-color: var.$primary-color-blue;
+      }
+    }
+  }
+  .point-text {
+    font-size: 27px;
+    line-height: 41px;
+    text-transform: uppercase;
+    padding-top: 5vw;
+    padding-bottom: 8vw;
+  }
+  p {
+    font-size: 23px;
+    line-height: 150%;
+    @include mix.media {
+      font-size: 20px;
+    }
+    @include mix.BajaMedia {
+      font-size: 18px;
+    }
+    @include mix.baja {
+      font-size: 16px;
+    }
+  }
+}

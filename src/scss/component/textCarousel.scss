@@ -1,0 +1,45 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+.Text-Carousel
+{
+    padding: 2rem 0 2rem 0;
+    .image-swiper
+    {
+       width: auto;
+       
+    }
+    @include mix.media
+    {
+        .mySwiper{width: auto;}
+    }
+    .image-slide
+    {
+        width: 500px;
+        height: 400px;
+    }
+    .text-imageCarousel
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        @include mix.media
+        {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .swiper-slide img 
+        {
+            height: 80% !important;
+            width: 90%;
+            border-radius: 5px;
+        }
+    }
+    .title-textCaroulse
+    {
+        text-align: center;
+    }
+}
+.font-color
+{
+    background: rgba(0,0,0,.3);
+}
+

@@ -1,0 +1,143 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 6.25rem;
+  background: var.$navColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .logo_nav {
+    margin-left: 2rem;
+  }
+  @include mix.baja {
+    min-height: 5rem;
+  }
+  .button-menu {
+    display: none;
+    justify-content: center;
+    height: auto;
+    align-content: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    @include mix.media {
+      display: flex;
+    }
+  }
+
+  li {
+    list-style: none;
+    a {
+      font-family: "Jockey One";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  .li-animation {
+    display: inline-block;
+
+    position: relative;
+  }
+  .li-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var.$primary-color-red;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+  .li-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  ul {
+    padding-left: 0;
+  }
+  .pagesNav {
+    display: flex;
+    gap: 3.5rem;
+    margin: 0;
+    align-items: center;
+    margin-right: 2rem;
+    @include mix.media {
+      display: none;
+    }
+  }
+  .pagNav-amburger {
+    text-align: center;
+    z-index: 11000;
+    position: fixed;
+    //top: 70px;
+    top: 0px;
+    width: 60%;
+    height: 100%;
+    background: var.$navColor;
+    transform: translateX(-100%);
+    margin-top: 10px;
+    @include mix.baja {
+      margin-top: 10px;
+      a {
+        font-size: 19px;
+        line-height: 26px;
+      }
+      .img-logo {
+        width: 100px;
+        height: 50px;
+      }
+    }
+    .amburger-submenu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .open {
+    transform: translateX(0%);
+    transition: all 1.5s ease;
+  }
+  .closed {
+    transition: all 1.5s ease;
+  }
+  .menubar-logo {
+    display: flex;
+  }
+  .overlay {
+    z-index: 2;
+    display: none;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+.img-logo {
+  content: url("../assets/logoSkillShot.png");
+  width: 120px;
+  height: 60px;
+  object-fit: cover;
+  @include mix.baja {
+    .img-logo {
+      width: 100px;
+      height: 50px;
+    }
+  }
+}
+.svg-cross {
+  height: 50px;
+  width: 50px;
+}

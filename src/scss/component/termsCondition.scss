@@ -1,0 +1,50 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+.Terms-Condition {
+  .Terms-img {
+    background-image: url("/src/assets/Terms-condition.png");
+    @include mix.mediaBaja {
+      transition: all 0.3s ease;
+      height: 35rem;
+      background-position: initial;
+    }
+    @include mix.BajaMedia {
+      transition: all 0.3s ease;
+      height: 30rem;
+      background-position: 45%;
+    }
+    @include mix.baja {
+      transition: all 0.3s ease;
+      height: 23rem;
+    }
+  }
+  .Terms-text-img {
+    width: 60rem;
+    position: relative;
+    top: 50%;
+    left: 5vw;
+    h1 {
+      font-family: "Jockey One";
+      font-family: "Jockey One", sans-serif;
+      color: #fff;
+      font-size: 6rem;
+      margin: 0;
+      padding-bottom: 5%;
+      @include mix.baja {
+        font-size: 2.2rem !important;
+      }
+    }
+  }
+  .text-terms {
+    width: 70%;
+    margin: 0 auto;
+    @include mix.BajaMedia {
+      width: 90%;
+    }
+    p {
+      font-size: 16px;
+      line-height: 150%;
+      white-space: pre-line;
+    }
+  }
+}

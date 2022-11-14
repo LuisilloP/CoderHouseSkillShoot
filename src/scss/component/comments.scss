@@ -1,0 +1,67 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+.text-skill
+{
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Jockey One';
+    font-style: normal;
+ 
+    padding: 2%;
+    h1{color: var.$primary-color-blue;font-size: 4rem;    margin: 0; }
+    h2{   margin: 0;}
+    span
+    {
+        color: var.$primary-color-red
+    }
+}
+.comment-boxes
+{   
+    display: flex;
+    padding-top: 10%;
+
+    .comment-box
+    {
+        background-color: white;
+        width: 400px;
+        height: 300px;
+        border: solid 2px black;
+        padding: 20px;
+        @include mix.baja
+        {
+            height: 350px;
+        }
+        @include mix.Ultrabaja
+        {
+            height: 400px;
+        }
+        p
+        {
+            font-family: 'Cabin';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+    .img-name
+    {
+        
+        .name-person
+        {
+            text-align: center;
+            p{margin: 2px 0px 2px 0px;}
+           
+        }
+        
+    }
+    .box-coment
+    {
+        height: 75%;
+    }
+    
+    
+}

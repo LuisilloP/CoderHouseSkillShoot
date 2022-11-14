@@ -1,0 +1,57 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+.sentence-photo
+{
+    gap:5rem;
+    display: flex;
+    height: 25rem;
+    @include mix.media
+    {
+        flex-direction:  column-reverse !important;
+        height: auto;
+    }
+    .SP-sentence
+    {
+        width: 50%;
+        @include mix.media{
+            text-align: center;
+            width: auto;
+            margin-top: -75px;
+        }
+        .text-sentence
+        {
+            width: 62%;
+            @include mix.mediaAlta{width: 100%;}
+        }
+    }
+    .SP-photo
+    {
+        width: 50%;
+        @include mix.media{width: auto;}
+        display: flex;
+        justify-content: center;
+        .photo
+        {
+            border-radius: 5px;
+            width: 80%;
+            height: 25rem;
+            object-fit: cover;
+          
+        }
+    }
+    .aling-start
+    {
+        justify-content: flex-start;
+        @include mix.media{justify-content: center;}
+    }
+    
+}
+.reverse
+{
+    flex-direction: row-reverse;
+    @include mix.media
+    {
+        flex-direction: row;
+
+    }
+}

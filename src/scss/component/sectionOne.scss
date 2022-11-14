@@ -1,0 +1,394 @@
+@use "../globals/variables.scss" as var;
+@use "../globals/mixins.scss" as mix;
+
+.section-one {
+  .h2-section-one {
+    margin: 0;
+    color: #fff;
+    font-family: "Jockey One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 100px;
+    @include mix.mediaAlta {
+      font-size: 4rem !important ;
+      line-height: 80px !important;
+    }
+    @include mix.media {
+      font-size: 3rem !important ;
+      line-height: 60px !important;
+    }
+    @include mix.baja {
+      font-size: 1.4rem !important ;
+      line-height: 30px !important;
+    }
+  }
+  .rectangle-blue {
+    height: 1.7rem;
+    background-color: var.$primary-color-blue;
+  }
+  .team-photo {
+    background-image: url("/src/assets/teamPhoto.png");
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    background-size: cover;
+    transition: all 0.3s ease;
+    @include mix.mediaAlta {
+      transition: all 0.3s ease;
+      height: 39rem;
+      background-position: center right;
+    }
+    @include mix.media {
+      background-position: 0%;
+    }
+    @include mix.baja {
+      transition: all 0.3s ease;
+      height: 25rem;
+      background-position: center;
+    }
+    .frame-red {
+      background-image: url("/src/assets/Frame.png");
+      height: 40rem;
+      transform: rotate(-360.86deg);
+      position: relative;
+      top: 51.5%;
+      background-size: cover;
+      @include mix.Alta {
+        top: 58%;
+      }
+      @include mix.mediaAlta {
+        height: 400px;
+        transform: rotate(-359.86deg);
+        top: 43%;
+      }
+      @include mix.mediaBaja {
+        top: 53%;
+      }
+      @include mix.media {
+        top: 60%;
+      }
+      @include mix.bajaAlta {
+        top: 65%;
+      }
+      @include mix.BajaMedia {
+        top: 69%;
+      }
+      @include mix.baja {
+        top: 53%;
+      }
+    }
+  }
+  .font-color-red {
+    height: 68rem;
+    //height: 55rem;
+    background-color: #e6006a;
+    @include mix.mediaAlta {
+      height: 56rem;
+    }
+    @include mix.media {
+      height: 50rem;
+    }
+    @include mix.baja {
+      height: 25rem;
+    }
+    .text-color-red {
+      width: 46rem;
+      position: relative;
+      right: 36%;
+
+      @include mix.mediaAlta {
+        width: 30rem;
+        right: 20%;
+      }
+      @include mix.media {
+        width: 20rem;
+        right: 15%;
+        bottom: 15%;
+      }
+      @include mix.baja {
+        width: 9rem;
+        right: 1%;
+        bottom: 0%;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .soccer-field {
+    background-image: url("/src/assets/soccerfield.png");
+    height: 120rem;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    @include mix.mediaAlta {
+      height: 80rem;
+    }
+    @include mix.media {
+      background-position: center;
+    }
+    @include mix.baja {
+      height: 40rem;
+    }
+  }
+  .soccer-girl {
+    background-image: url("/src/assets/soccergirl.png");
+    width: 75rem;
+    height: 68rem;
+    position: relative;
+    top: 8%;
+    background-size: cover;
+    left: 30%;
+    z-index: 3;
+    @include mix.mediaAlta {
+      width: 55rem;
+      height: 50rem;
+      left: 19%;
+      top: 13%;
+    }
+    @include mix.media {
+      width: 46rem;
+      height: 42rem;
+      left: 19%;
+    }
+    @include mix.baja {
+      width: 26rem;
+      height: 24rem;
+      top: 19%;
+      position: sticky;
+    }
+  }
+  .font-color-white {
+    height: 84rem;
+    @include mix.mediaAlta {
+      height: 56rem;
+    }
+    @include mix.media {
+      height: 50rem;
+    }
+    @include mix.baja {
+      height: 25rem;
+    }
+    .frame-red {
+      background-image: url("/src/assets/Frame.png");
+      height: 36rem;
+      transform: rotate(-356deg) scaleX(-1);
+      position: relative;
+      background-size: cover;
+      bottom: 34%;
+      @include mix.Alta {
+        transform: rotate(-357.86deg) scaleX(-1);
+        bottom: 30%;
+      }
+      @include mix.mediaAlta {
+        height: 400px;
+        bottom: 42%;
+      }
+      @include mix.mediaBaja {
+        bottom: 38%;
+      }
+      @include mix.media {
+        bottom: 32%;
+      }
+      @include mix.bajaAlta {
+        bottom: 29%;
+      }
+      @include mix.baja {
+        bottom: 43%;
+      }
+    }
+    .text-color-white {
+      width: 42rem;
+      position: relative;
+      bottom: 30%;
+      left: 5%;
+      z-index: 3;
+      h1 {
+        color: #000 !important;
+      }
+      @include mix.mediaAlta {
+        width: 24rem;
+        bottom: 35%;
+      }
+      @include mix.baja {
+        width: 8rem;
+        bottom: 80%;
+      }
+    }
+    .boys {
+      background-image: url("/src/assets/boys.png");
+      height: 81rem;
+      background-size: cover;
+      position: relative;
+      bottom: 61%;
+      z-index: 2;
+      .btn-div {
+        position: relative;
+        top: 80%;
+        text-align: center;
+
+        //@include mix.media{left: 33%;}
+      }
+      @include mix.mediaAlta {
+        height: 53rem;
+        bottom: 70%;
+      }
+      @include mix.media {
+        height: 40rem;
+        bottom: 58%;
+      }
+      @include mix.baja {
+        height: 21rem;
+        bottom: 103%;
+      }
+    }
+  }
+  .rectangle-blue {
+    background: #479eea;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 1250px;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    z-index: 10;
+    position: relative;
+    bottom: 4.6rem;
+    @include mix.media {
+      bottom: 10rem;
+      height: 1000px;
+    }
+    @include mix.baja {
+      bottom: 0rem;
+      height: 590px;
+    }
+    .text-rectangle {
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 15%;
+      text-align: center;
+      @include mix.mediaAlta {
+        padding-top: 20%;
+        width: 80%;
+      }
+
+      @include mix.baja {
+        width: 95%;
+      }
+      @include mix.Ultrabaja {
+        padding-top: 88px;
+      }
+    }
+    .first-text {
+      font-family: "Jockey One";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 5.5rem;
+      line-height: 80px;
+      text-transform: uppercase;
+      @include mix.mediaAlta {
+        font-size: 3.6rem;
+      }
+      @include mix.baja {
+        font-size: 1.5rem !important;
+      }
+    }
+    .second-text {
+      font-size: 4.5rem;
+      line-height: 80px;
+      @include mix.mediaAlta {
+        font-size: 2.8rem;
+      }
+    }
+    .third-text {
+      font-size: 3rem;
+      @include mix.mediaAlta {
+        margin-top: 4rem;
+        font-size: 2.2rem;
+      }
+      @include mix.baja {
+        margin-top: 0;
+      }
+    }
+    .ul-container {
+      @include mix.bajaAlta {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 0;
+      @include mix.bajaAlta {
+        gap: 5px;
+        justify-content: space-between;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        line-height: 10px;
+      }
+      @include mix.bajaAlta {
+        li {
+          display: flex;
+          align-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 210px;
+            line-height: 41px;
+            text-align: initial;
+          }
+        }
+      }
+    }
+    .ul-two {
+      @include mix.bajaAlta {
+        margin-top: 0;
+      }
+    }
+    li {
+      font-family: "Cabin";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 68px;
+      @include mix.mediaAlta {
+        font-size: 1.8rem;
+      }
+      @include mix.mediaBaja {
+        font-size: 1.6rem;
+      }
+      @include mix.media {
+        font-size: 1.4rem;
+      }
+      @include mix.baja {
+        font-size: 1rem;
+        line-height: 30px;
+      }
+    }
+    .soccer-ball {
+      background-image: url("/src/assets/soccerBall.png");
+      width: 20px;
+      background-size: cover;
+      height: 20px;
+      @include mix.baja {
+        height: 15px;
+        width: 15px;
+      }
+    }
+    .soccer-add {
+      display: none;
+      @include mix.bajaAlta {
+        display: list-item;
+      }
+    }
+    .soccer-normal {
+      @include mix.bajaAlta {
+        display: none;
+      }
+    }
+  }
+}
