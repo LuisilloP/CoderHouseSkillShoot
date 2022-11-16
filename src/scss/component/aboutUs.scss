@@ -34,7 +34,7 @@
     }
     @include mix.baja {
       transition: all 0.3s ease;
-      height: 23rem;
+      height: 17rem;
     }
     .AboutUs-text-img {
       width: 40rem;
@@ -60,7 +60,7 @@
         font-size: 30px;
 
         @include mix.baja {
-          font-size: 1.4rem !important;
+          font-size: 1.2rem !important;
         }
       }
       h1 {
@@ -71,7 +71,7 @@
         padding-bottom: 5%;
 
         @include mix.baja {
-          font-size: 2.2rem !important;
+          font-size: 2rem !important;
         }
       }
     }
@@ -90,6 +90,7 @@
         text-align: center;
         text-transform: uppercase;
         line-height: 49px !important;
+        margin-top: 0;
         @include mix.BajaMedia {
           font-size: 20px !important;
         }
@@ -143,13 +144,14 @@
     }
   }
   .our-MVVO {
-    height: 140rem;
     display: grid;
     grid-template-rows: 1fr 0.9fr 1fr 1fr;
     .SpecialButton {
       display: none;
     }
+
     @include mix.media {
+      grid-template-rows: 1fr 0.5fr 1fr 1fr;
       .btn-welcome-join {
         display: none;
       }
@@ -162,18 +164,25 @@
       .frame-blue {
         position: relative;
         background-image: url("/src/assets/aboutUs/FrameBlue.png");
-        height: 13.5vw;
+        height: 15vw;
         background-size: cover;
-        bottom: 7vw;
+        bottom: 9vw;
       }
       .frame-rose {
         position: relative;
         background-image: url("/src/assets/aboutUs/VectorRose.png");
-        height: 13.5vw;
+        height: 14vw;
         background-size: cover;
-        bottom: 2vw;
+        bottom: 2rem;
+        @include mix.BajaMedia {
+          bottom: 0rem;
+        }
         @include mix.baja {
-          bottom: 1vw;
+          bottom: -1.5rem;
+          height: 18vw;
+        }
+        @include mix.Ultrabaja {
+          bottom: -5rem;
         }
       }
       .ballon-foot {
@@ -223,13 +232,19 @@
           }
           @include mix.baja {
             font-size: 2.5rem !important;
+            line-height: 100% !important;
           }
         }
       }
       .text {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        @include mix.media {
+          flex-direction: column;
+          input {
+            margin-bottom: 10%;
+          }
+        }
       }
     }
   }
@@ -265,5 +280,11 @@
     @include mix.baja {
       font-size: 16px;
     }
+    @include mix.Ultrabaja {
+      font-size: 15px;
+    }
+  }
+  .container-form {
+    margin-top: auto;
   }
 }

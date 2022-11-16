@@ -60,7 +60,7 @@ a {
   object-fit: cover;
 }
 .instagram-logo {
-  content: url("/src/assets/instagram.png");
+  content: url("/instagram.png");
 }
 .facebook-logo {
   content: url("/src/assets/facebook.png");
@@ -80,7 +80,7 @@ h1 {
   }
   @include mix.baja {
     font-size: 1.4rem !important ;
-    line-height: 30px !important;
+    line-height: 25px !important;
   }
 }
 h2 {
@@ -90,7 +90,7 @@ h2 {
   }
   @include mix.baja {
     font-size: 1rem !important ;
-    line-height: 30px !important;
+    line-height: 25px !important;
   }
 }
 h3 {
@@ -100,7 +100,7 @@ h3 {
   }
   @include mix.baja {
     font-size: 1rem !important ;
-    line-height: 30px !important;
+    line-height: 20px !important;
   }
 }
 h4 {

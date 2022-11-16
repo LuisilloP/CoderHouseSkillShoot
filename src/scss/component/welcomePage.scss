@@ -6,7 +6,7 @@
     height: 53rem;
   }
   @include mix.baja {
-    height: 24rem;
+    height: 25rem;
   }
   .welcome-img {
     background-image: url("/src/assets/Hero_image.png");
@@ -23,17 +23,27 @@
       padding-left: 7vw;
     }
     @include mix.media {
-      width: 40rem;
+      width: 28rem;
       padding-left: 5vw;
+      top: 10%;
     }
     @include mix.baja {
       width: 13rem;
       top: 13%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
     h3 {
       font-family: "Cabin", sans-serif;
       font-size: 2.5rem;
       margin: 0;
+      @include mix.media {
+        font-size: 1.3rem !important;
+      }
+      @include mix.baja {
+        font-size: 1rem !important;
+      }
     }
     h1 {
       font-family: "Jockey One", sans-serif;

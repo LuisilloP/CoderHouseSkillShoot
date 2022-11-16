@@ -27,7 +27,7 @@ const DaRules = (props: Props) => {
           </div>
           <div className="text-rules cabin position-relative ">
             <p>
-              Skil Shot es un deporte que puede ser jugado entre dos o cuatro
+              Skill Shot es un deporte que puede ser jugado entre dos o cuatro
               personas, es decir, se juega de forma individual 1 contra 1, o en
               parejas 2 contra 2.
             </p>

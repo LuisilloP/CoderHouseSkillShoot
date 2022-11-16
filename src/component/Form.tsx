@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { formUser, formUserValidator } from "../types";
 import { Message } from "./sweetAlert/SweetAlert";
+
+import Instagram from "../assets/instagram.png";
+import Tiktok from "../assets/tik-tokTwo.png";
 interface FormState {
   inputValues: formUser;
   Validator: formUserValidator;
@@ -94,7 +97,7 @@ const Form = () => {
           brevedad posible.
         </h3>
         <form onSubmit={handleSubmit}>
-          <label>Nombre</label>
+          <label htmlFor="name1">Nombre</label>
           <div className="flex-colum">
             <input
               onChange={handleChange}
@@ -104,12 +107,13 @@ const Form = () => {
               value={inputValue.name}
               type="text"
               name="name"
+              id="name1"
             />
             {ValidateName[0] && (
               <p className="error-message">{ValidateName[1]}</p>
             )}{" "}
           </div>
-          <label>Correo</label>
+          <label htmlFor="mail1">Correo</label>
           <div className="flex-colum">
             <input
               onChange={handleChange}
@@ -119,12 +123,13 @@ const Form = () => {
               value={inputValue.mail}
               type="text"
               name="mail"
+              id="mail1"
             />
             {ValidateMail[0] && (
               <p className="error-message">{ValidateMail[1]}</p>
             )}
           </div>
-          <label>Mensaje</label>
+          <label htmlFor="message1">Mensaje</label>
           <div className="flex-colum">
             <textarea
               onChange={handleChange}
@@ -133,6 +138,7 @@ const Form = () => {
               }}
               value={inputValue.message}
               name="message"
+              id="message1"
             />
             {ValidateMessage[0] && (
               <p className="error-message">{ValidateMessage[1]}</p>
@@ -179,10 +185,20 @@ const Form = () => {
             href="https://www.instagram.com/skillshot1vs1/?igshid=YmMyMTA2M2Y%3D&fbclid=IwAR3h9zNW5HMn_QhggVZh2brsLR0oqtXiT1QiUw0t6FRmLpxH4qOrK81EsXc"
             target="_blank"
           >
-            <img className="instagram-logo logo" />
+            <img
+              className=" logo"
+              src={Instagram}
+              alt="logo-instagram"
+              aria-label="logo-instagram"
+            />
           </a>
           <a href="https://www.tiktok.com/@skillshot1vs1" target="_blank">
-            <img className="tik-tok-logo logo" />
+            <img
+              className=" logo"
+              src={Tiktok}
+              alt="logo-tik-tok"
+              aria-label="logo-tiktok"
+            />
           </a>
         </div>
       </div>

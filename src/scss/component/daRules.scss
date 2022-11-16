@@ -4,13 +4,11 @@
   background-color: var.$primary-color-cian;
   .daRules-img {
     background-image: url("/src/assets/daRules/reglamentHeader.png");
-    height: 71vw !important;
+    height: 56vw !important;
     @include mix.mediaAlta {
       background-position: initial !important;
     }
-    @include mix.baja {
-      height: 85vw !important;
-    }
+
     .daRules-text-img {
       width: 40rem;
       position: relative;
@@ -39,24 +37,22 @@
     margin: 0 auto;
     font-weight: 400;
     font-size: 25px;
+    p {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
     @include mix.mediaBaja {
       font-size: 21px;
     }
     line-height: 150%;
   }
   .rules {
-    height: 50rem;
-    @include mix.mediaBaja {
-      height: 31rem;
-    }
-    @include mix.baja {
-      height: 25rem;
-    }
+    height: auto;
     .container-field {
       height: 10px;
       .field-img {
         background-image: url("/src/assets/soccerfield.png");
-        height: 82rem;
+        height: 112vw;
         position: relative;
         left: 25vw;
         background-size: cover;
@@ -68,6 +64,8 @@
       width: 70vw;
       margin: 0 auto;
       background-size: cover;
+      margin-bottom: 3vw;
+      margin-top: 3vw;
       @include mix.BajaMedia {
         height: 36vw;
         width: 90vw;
@@ -75,17 +73,15 @@
     }
   }
   .rulesTwo {
-    height: 50rem;
-    @include mix.mediaBaja {
-      height: 31rem;
-    }
-
+    height: auto;
     .reglament-two-img {
       display: flex;
       gap: 5px;
       height: 30vw;
       width: 90vw;
       margin: 0 auto;
+      margin-bottom: 3vw;
+      margin-top: 3vw;
       @include mix.BajaMedia {
         width: 95vw;
         height: 33vw;
@@ -103,19 +99,13 @@
     }
   }
   .rulesThree {
-    height: 50rem;
-    @include mix.mediaBaja {
-      height: 31rem;
-      padding-top: 7%;
-      padding-bottom: 15%;
-    }
-    @include mix.baja {
-      height: 20rem;
-    }
+    height: auto;
+
     .ruleThree-text {
       width: 40%;
       margin: 0 auto;
       text-align: center;
+
       @include mix.media {
         width: 80%;
       }
@@ -124,6 +114,9 @@
         font-size: 30px;
         line-height: 41px;
         text-transform: uppercase;
+        margin-top: 0;
+        line-height: 110%;
+        margin-bottom: 0;
         @include mix.baja {
           font-size: 20px;
         }
@@ -135,6 +128,8 @@
       width: 90vw;
       background-size: cover;
       margin: 0 auto;
+      margin-bottom: 3vw;
+      margin-top: 3vw;
       @include mix.BajaMedia {
         width: 95vw;
       }
@@ -147,7 +142,7 @@
   .button-container {
     position: relative;
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 5vw;
     height: 10px;
     .btn-welcome-join {
       position: relative;
@@ -158,9 +153,9 @@
       background-image: url("/src/assets/daRules/VectorBlue.png");
       height: 13.5vw;
       background-size: cover;
-      bottom: 58vw;
-      @include mix.mediaBaja {
-        bottom: 53vw;
+      bottom: 55vw;
+      @include mix.media {
+        bottom: 57vw;
       }
     }
     .soccer-player {
@@ -184,6 +179,7 @@
       text-align: center;
       font-family: "Jockey One";
       font-size: 4.5rem !important;
+      line-height: 30px !important;
       padding-top: 5rem;
       @include mix.media {
         font-size: 4.5rem !important;
@@ -244,8 +240,7 @@
   .button-container-rose {
     height: 5rem;
     position: relative;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5vw;
     text-align: center;
 
     .frame-rose {
@@ -257,6 +252,9 @@
       z-index: 2;
       @include mix.mediaBaja {
         bottom: 1vw;
+      }
+      @include mix.baja {
+        bottom: -5vw;
       }
     }
   }
@@ -278,7 +276,7 @@
       text-align: center;
       font-family: "Jockey One";
       font-size: 4.5rem !important;
-      padding-top: 5rem;
+      padding-top: 3vw;
       @include mix.media {
         font-size: 4.5rem !important;
       }
@@ -319,6 +317,9 @@
         grid-template-columns: 3fr 1fr;
         gap: 0.5rem;
         height: 82px;
+        @include mix.baja {
+          height: 70px;
+        }
       }
       .name {
         background-color: var.$primary-color-red;

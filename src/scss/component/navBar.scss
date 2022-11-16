@@ -10,7 +10,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-family: "Lato", sans-serif;
-  color: #fff;
+  color: #f7f7f7;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   .logo_nav {
@@ -44,8 +44,12 @@ nav {
   }
   .li-animation {
     display: inline-block;
-
     position: relative;
+    @include mix.media {
+      border-bottom: 1px solid #919191;
+      text-align: left;
+      padding-left: 10%;
+    }
   }
   .li-animation:after {
     content: "";
@@ -101,6 +105,7 @@ nav {
     .amburger-submenu {
       display: flex;
       flex-direction: column;
+      gap: 10px;
     }
   }
   .open {
@@ -126,7 +131,6 @@ nav {
   }
 }
 .img-logo {
-  content: url("../assets/logoSkillShot.png");
   width: 120px;
   height: 60px;
   object-fit: cover;
