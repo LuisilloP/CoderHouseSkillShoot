@@ -21,7 +21,7 @@
     }
   }
   .AboutUs-img {
-    background-image: url("/src/assets/aboutUs/heroTwo.png");
+    background-image: url("/src/assets/aboutUs/heroTwo.webp");
     @include mix.mediaBaja {
       transition: all 0.3s ease;
       height: 35rem;
@@ -264,6 +264,9 @@
         bottom: 188vw;
         width: 105vw;
         height: 69rem;
+      }
+      @include mix.baja {
+        height: 40rem;
       }
     }
   }

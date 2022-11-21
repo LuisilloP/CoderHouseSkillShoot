@@ -13,7 +13,7 @@ const DaRules = (props: Props) => {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <Helmet>
-        <title>Skill Shoot | Reglamento</title>
+        <title>Skill Shot | Reglamento</title>
       </Helmet>
       <div className="daRules">
         <div className="daRules-img font-img-style">

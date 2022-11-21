@@ -16,7 +16,7 @@ const Principal = (props: Props) => {
   return (
     <div>
       <Helmet>
-        <title>Skill Shoot | Principal</title>
+        <title>Skill Shot | Principal</title>
         <meta name="description" content="Example" />
       </Helmet>
       <WelcomePage />

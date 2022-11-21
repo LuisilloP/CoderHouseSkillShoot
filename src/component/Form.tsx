@@ -75,7 +75,13 @@ const Form = () => {
 
       //console.log(sendMensaje)
       if (sendMensaje === 3) {
-        Message(inputValue.name, inputValue.message, inputValue.mail);
+        Message(
+          inputValue.name,
+          inputValue.message,
+          inputValue.mail,
+          setInputValue,
+          setIsChecked
+        );
       } else {
       }
     } else {

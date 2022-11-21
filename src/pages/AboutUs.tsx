@@ -13,7 +13,7 @@ const AboutUs = (props: Props) => {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <Helmet>
-        <title>Skill Shoot | Sobre Nosotros</title>
+        <title>Skill Shot | Sobre Nosotros</title>
       </Helmet>
       <div className="AboutUs">
         <div className="AboutUs-img  font-img-style">

@@ -10,7 +10,7 @@ const TermsCondition = () => {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <Helmet>
-        <title>Skill Shoot | Términos y condiciones</title>
+        <title>Skill Shot | Términos y condiciones</title>
       </Helmet>
       <TermsAndCondition
         title="Términos y condiciones"
